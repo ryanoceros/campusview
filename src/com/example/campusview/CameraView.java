@@ -10,6 +10,7 @@ public class CameraView extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.camera_view);
+		//hi
 	}
 
 	@Override
