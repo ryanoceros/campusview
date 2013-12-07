@@ -20,7 +20,7 @@ public class CameraView extends Activity {
 		      CameraBackground cv = new CameraBackground(
 		         this.getApplicationContext());
 		       rl = new FrameLayout(
-		         this.getApplicationContext());
+		         this.getApplicationContext()); 
 		       TextView text=new TextView(this); 
 		       text.setText("GOLDEN Gate"); 
 		       text.setTextColor(Color.WHITE);                            
