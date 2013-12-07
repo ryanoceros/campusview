@@ -2,22 +2,37 @@ package com.example.campusview;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.Menu;
+import android.widget.FrameLayout;
+import android.widget.TextView;
 
 public class CameraView extends Activity {
 
-	@Override
+	
+	FrameLayout rl;
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.camera_view);
-		//hi
+		
+		try{
+		      super.onCreate(savedInstanceState);
+		      
+		      CameraBackground cv = new CameraBackground(
+		         this.getApplicationContext());
+		       rl = new FrameLayout(
+		         this.getApplicationContext());
+		       TextView text=new TextView(this); 
+		       text.setText("GOLDEN Gate"); 
+		       text.setTextColor(Color.WHITE);                            
+		       text.setTypeface(Typeface.DEFAULT_BOLD);
+		       
+		      rl.addView(cv);
+		      rl.addView(text);
+		      setContentView(rl);
+		   } catch(Exception e){}
+		
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.camera_view, menu);
-		return true;
-	}
+	
 
 }
